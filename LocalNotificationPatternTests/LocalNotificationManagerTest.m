@@ -75,7 +75,7 @@
     id dataSourceMock = [OCMockObject mockForClass:[ExampleScheduleDataSource class]];
     [[[dataSourceMock stub] andReturn:expectedScheduleDates] weeklyWorkSchedule];
     self.managerSpy.scheduleDataSource = dataSourceMock;
-    // 設定
+    // 通知を登録
     [self.managerSpy scheduleLocalNotifications];
     // 期待するもの
     // self.managerSpy.schedules には登録されるUILocalNotificationが入る

@@ -13,7 +13,7 @@
 - (void)scheduleLocalNotifications {
     // 一度通知を全てキャンセルする
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
-    // 通知を設定する
+    // 通知を設定していく...
     [self scheduleWeeklyWorkSchedule];
 
 #if DEBUG
