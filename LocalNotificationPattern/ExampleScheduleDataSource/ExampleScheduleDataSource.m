@@ -13,7 +13,7 @@
 
 - (NSArray *)weeklyWorkSchedule {
     return @[
-        [NSDate date],
+        [NSDate dateYesterday],
         [NSDate dateTomorrow]
     ];
 }
