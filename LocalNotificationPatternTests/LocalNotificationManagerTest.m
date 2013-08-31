@@ -13,6 +13,7 @@
 // テスト用にLocalNotificationManagerを継承したモッククラスを作る
 @interface LocationNotificationManagerSpy : LocalNotificationManager
 @property(nonatomic) NSMutableArray *schedules;
+
 // helper
 - (UILocalNotification *)notificationAtIndex:(NSUInteger) index;
 
@@ -47,11 +48,9 @@
 
 // 実際のテストクラス
 @interface LocalNotificationManagerTest : SenTestCase
-@end
-
-@interface LocalNotificationManagerTest ()
 @property(nonatomic, strong) LocationNotificationManagerSpy *managerSpy;
 @end
+
 
 @implementation LocalNotificationManagerTest {
 }
