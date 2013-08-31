@@ -28,6 +28,7 @@
 		17B5CDB53C038A0B3F40F52E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CE0FC5399B2904599622 /* ViewController.m */; };
 		17B5CEF3C7EC685D8452F6A5 /* LocalNotificationManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C7091CE9B6384D810F89 /* LocalNotificationManagerTest.m */; };
 		17B5CFF448BEEDC46AFF9645 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B5C75B64B311BE2293B199 /* CoreGraphics.framework */; };
+		A2C15F6E0DCF4DE2AA75FFEB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B972354ED442E8977BF569 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		0AEAF1E41F7F4B22BB2D6E01 /* libPods-LocalNotificationPatternTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LocalNotificationPatternTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		107063FD56134DE78CE9ECF2 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		17B5C03FA89AFA0767B6B3CC /* LocalNotificationPatternTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalNotificationPatternTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B5C0AF7A0AB1182F8EC864 /* LocalNotificationPattern-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LocalNotificationPattern-Prefix.pch"; sourceTree = "<group>"; };
 		17B5C243D562E4CA4FBFD5E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 		17B5CF62E81BB6EB653F1D0E /* LocalNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNotificationManager.m; sourceTree = "<group>"; };
 		17B5CFDC572870E629A36B26 /* LocalNotificationPattern-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "LocalNotificationPattern-Info.plist"; sourceTree = "<group>"; };
 		17B5CFE575690B97C1BFC073 /* LocalNotificationPatternTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "LocalNotificationPatternTests-Info.plist"; sourceTree = "<group>"; };
+		D4B972354ED442E8977BF569 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E418A6F08EB04EE5829E965B /* Pods-LocalNotificationPatternTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalNotificationPatternTests.xcconfig"; path = "Pods/Pods-LocalNotificationPatternTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -80,6 +83,7 @@
 				17B5C324E0C6680131656DCC /* UIKit.framework in Frameworks */,
 				17B5C2E915E7B7314A90D7D3 /* Foundation.framework in Frameworks */,
 				17B5CFF448BEEDC46AFF9645 /* CoreGraphics.framework in Frameworks */,
+				A2C15F6E0DCF4DE2AA75FFEB /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +124,7 @@
 				17B5C75B64B311BE2293B199 /* CoreGraphics.framework */,
 				17B5C8360D526E1AB91C0469 /* SenTestingKit.framework */,
 				0AEAF1E41F7F4B22BB2D6E01 /* libPods-LocalNotificationPatternTests.a */,
+				D4B972354ED442E8977BF569 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 				17B5C5F30EC3C16C918EB975 /* Podfile */,
 				E418A6F08EB04EE5829E965B /* Pods-LocalNotificationPatternTests.xcconfig */,
 				17B5C3E630F26EFAA00241B7 /* readme.md */,
+				107063FD56134DE78CE9ECF2 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -224,9 +230,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17B5C6E2631C11EAEBFD4475 /* Build configuration list for PBXNativeTarget "LocalNotificationPattern" */;
 			buildPhases = (
+				4254B39D37584EFB9B203997 /* Check Pods Manifest.lock */,
 				17B5CE7D359D4E575872A326 /* Sources */,
 				17B5C0D31CE7A78DF4D8F860 /* Frameworks */,
 				17B5C6508E3CB6F787478906 /* Resources */,
+				1595526E2C174ACABC38E25A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -289,6 +297,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1595526E2C174ACABC38E25A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		17B5CC846824305D6B31EF7C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,6 +324,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		4254B39D37584EFB9B203997 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 		45E77B5BC7F7439389A7893C /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -397,6 +435,7 @@
 /* Begin XCBuildConfiguration section */
 		17B5C46D9C14661323164190 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 107063FD56134DE78CE9ECF2 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LocalNotificationPattern/LocalNotificationPattern-Prefix.pch";
@@ -447,6 +486,7 @@
 		};
 		17B5CA590807A468C0FEC1A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 107063FD56134DE78CE9ECF2 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LocalNotificationPattern/LocalNotificationPattern-Prefix.pch";
