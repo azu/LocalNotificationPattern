@@ -14,7 +14,7 @@
     // 一度通知を全てキャンセルする
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     // 通知を設定する
-
+    [self scheduleWeeklyWorkSchedule];
 
 #if DEBUG
     for (UILocalNotification *notification in [[UIApplication sharedApplication] scheduledLocalNotifications]) {
@@ -29,6 +29,19 @@
 #endif
 }
 
+- (ExampleScheduleDataSource *)scheduleDataSource {
+    NSAssert(_scheduleDataSource != nil, @"通知登録のデータソースが設定されてない！");
+    return _scheduleDataSource;
+}
+
+// 例: weeklyWorkSchedule の時間を通知登録する
+- (void)scheduleWeeklyWorkSchedule {
+    // NSDateの配列が返ってくる
+    NSArray *schedules = [self.scheduleDataSource weeklyWorkSchedule];
+    for (NSDate *date in schedules) {
+        [self makeNotification:date alertBody:@"Work Schedule" userInfo:nil];
+    }
+}
 
 #pragma mark - helper
 - (void)makeNotification:(NSDate *) fireDate alertBody:(NSString *) alertBody userInfo:(NSDictionary *) userInfo {

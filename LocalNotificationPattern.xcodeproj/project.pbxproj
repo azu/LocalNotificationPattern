@@ -26,7 +26,7 @@
 		17B5CCFF5AF9AB3A0D06181A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17B5C0853E34632A28F0B883 /* InfoPlist.strings */; };
 		17B5CD0F168E5C96A74F4507 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C654F9C83A0075090F4D /* main.m */; };
 		17B5CDB53C038A0B3F40F52E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CE0FC5399B2904599622 /* ViewController.m */; };
-		17B5CEF3C7EC685D8452F6A5 /* LocalNotificationMangerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C7091CE9B6384D810F89 /* LocalNotificationMangerTest.m */; };
+		17B5CEF3C7EC685D8452F6A5 /* LocalNotificationManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C7091CE9B6384D810F89 /* LocalNotificationManagerTest.m */; };
 		17B5CFF448BEEDC46AFF9645 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B5C75B64B311BE2293B199 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +51,7 @@
 		17B5C5F30EC3C16C918EB975 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		17B5C64B6741E057E5FB9003 /* LocalNotificationPattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalNotificationPattern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B5C654F9C83A0075090F4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		17B5C7091CE9B6384D810F89 /* LocalNotificationMangerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNotificationMangerTest.m; sourceTree = "<group>"; };
+		17B5C7091CE9B6384D810F89 /* LocalNotificationManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNotificationManagerTest.m; sourceTree = "<group>"; };
 		17B5C75B64B311BE2293B199 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		17B5C8360D526E1AB91C0469 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		17B5C943775205E1047C334E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				17B5CBDB444FF32BA62E6655 /* Supporting Files */,
-				17B5C7091CE9B6384D810F89 /* LocalNotificationMangerTest.m */,
+				17B5C7091CE9B6384D810F89 /* LocalNotificationManagerTest.m */,
 			);
 			path = LocalNotificationPatternTests;
 			sourceTree = "<group>";
@@ -340,7 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17B5CB2CDBEF25BC31477E7E /* LocalNotificationManager.m in Sources */,
-				17B5CEF3C7EC685D8452F6A5 /* LocalNotificationMangerTest.m in Sources */,
+				17B5CEF3C7EC685D8452F6A5 /* LocalNotificationManagerTest.m in Sources */,
 				17B5CB47A2CFB4F76320DA2B /* ExampleScheduleDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +421,7 @@
 				INFOPLIST_FILE = "LocalNotificationPatternTests/LocalNotificationPatternTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -439,6 +440,7 @@
 				INFOPLIST_FILE = "LocalNotificationPatternTests/LocalNotificationPatternTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
