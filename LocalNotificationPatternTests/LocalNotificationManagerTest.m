@@ -13,10 +13,10 @@
 // テスト用にLocalNotificationManagerを継承したモッククラスを作る
 @interface LocationNotificationManagerSpy : LocalNotificationManager
 @property(nonatomic) NSMutableArray *schedules;
-
+// helper
 - (UILocalNotification *)notificationAtIndex:(NSUInteger) index;
 
-// stub method
+// overwrite
 - (void)schedule:(NSDate *) fireDate alertBody:(NSString *) alertBody userInfo:(NSDictionary *) userInfo;
 @end
 
