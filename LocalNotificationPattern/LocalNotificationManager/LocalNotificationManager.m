@@ -7,6 +7,10 @@
 #import "ExampleScheduleDataSource.h"
 
 
+const struct LocalNotificationAttributes LocalNotification = {
+    .weeklyWork = @"LocalNotification.weeklyWork"
+};
+
 @implementation LocalNotificationManager
 
 #pragma mark - Scheduler
@@ -14,7 +18,7 @@
     // 一度通知を全てキャンセルする
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     // 通知を設定していく...
-    [self scheduleWeeklyWorkSchedule];
+    [self scheduleWeeklyWork];
 
 #if DEBUG
     for (UILocalNotification *notification in [[UIApplication sharedApplication] scheduledLocalNotifications]) {
@@ -35,11 +39,13 @@
 }
 
 // 例: weeklyWorkSchedule の時間を通知登録する
-- (void)scheduleWeeklyWorkSchedule {
+- (void)scheduleWeeklyWork {
     // NSDateの配列が返ってくる
     NSArray *schedules = [self.scheduleDataSource weeklyWorkSchedule];
     for (NSDate *date in schedules) {
-        [self makeNotification:date alertBody:@"Work Schedule" userInfo:nil];
+        [self makeNotification:date alertBody:@"Work Schedule" userInfo:@{
+            @"key" : LocalNotification.weeklyWork
+        }];
     }
 }
 

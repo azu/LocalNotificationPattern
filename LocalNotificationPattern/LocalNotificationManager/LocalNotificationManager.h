@@ -7,6 +7,13 @@
 
 @class ExampleScheduleDataSource;
 
+/*
+ 通知から起動する際に、UILocalNotification.userInfoの値を見て
+ どの通知から来たのを知るためにkey情報
+  */
+extern const struct LocalNotificationAttributes {
+    __unsafe_unretained NSString *weeklyWork;
+} LocalNotificationAttributes;
 
 @interface LocalNotificationManager : NSObject
 @property(nonatomic, strong) ExampleScheduleDataSource *scheduleDataSource;
