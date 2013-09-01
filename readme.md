@@ -2,6 +2,10 @@
 
 UILocalNotification Pattern & Test Pattern
 
+For details, please see the fllowing page:
+
+* [UILocalNotificationを使った通知の設定について — ios-practice 0.1 documentation](https://ios-practice.readthedocs.org/en/latest/docs/notification/ "UILocalNotificationを使った通知の設定について — ios-practice 0.1 documentation")
+
 ## Structure
 
 ``LocalNotificationManager``
